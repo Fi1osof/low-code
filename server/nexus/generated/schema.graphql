@@ -216,6 +216,11 @@ type Mutation {
   createResetPasswordProcessor(
     where: UserWhereUniqueInput!
   ): ResetPasswordResponse!
+
+  """
+  Выполнение команды
+  """
+  execCommand(args: [String!], cmd: String!, cwd: String): JSON
   resetPasswordProcessor(where: ResetPasswordProcessorWhereInput!): AuthPayload!
 
   """

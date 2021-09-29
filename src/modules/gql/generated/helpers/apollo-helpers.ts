@@ -20,9 +20,10 @@ export type FileFieldPolicy = {
 	size?: FieldPolicy<any> | FieldReadFunction<any>,
 	updatedAt?: FieldPolicy<any> | FieldReadFunction<any>
 };
-export type MutationKeySpecifier = ('createResetPasswordProcessor' | 'resetPasswordProcessor' | 'signin' | 'signup' | 'singleUpload' | MutationKeySpecifier)[];
+export type MutationKeySpecifier = ('createResetPasswordProcessor' | 'execCommand' | 'resetPasswordProcessor' | 'signin' | 'signup' | 'singleUpload' | MutationKeySpecifier)[];
 export type MutationFieldPolicy = {
 	createResetPasswordProcessor?: FieldPolicy<any> | FieldReadFunction<any>,
+	execCommand?: FieldPolicy<any> | FieldReadFunction<any>,
 	resetPasswordProcessor?: FieldPolicy<any> | FieldReadFunction<any>,
 	signin?: FieldPolicy<any> | FieldReadFunction<any>,
 	signup?: FieldPolicy<any> | FieldReadFunction<any>,

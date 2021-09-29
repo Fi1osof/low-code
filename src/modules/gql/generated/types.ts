@@ -205,6 +205,8 @@ export interface LetterWhereInput {
 export interface Mutation {
   __typename?: 'Mutation';
   createResetPasswordProcessor: ResetPasswordResponse;
+  /** Выполнение команды */
+  execCommand?: Maybe<Scalars['JSON']>;
   resetPasswordProcessor: AuthPayload;
   /** Авторизация */
   signin: AuthPayload;
@@ -217,6 +219,13 @@ export interface Mutation {
 
 export type MutationCreateResetPasswordProcessorArgs = {
   where: UserWhereUniqueInput;
+};
+
+
+export type MutationExecCommandArgs = {
+  args?: Maybe<Array<Scalars['String']>>;
+  cmd: Scalars['String'];
+  cwd?: Maybe<Scalars['String']>;
 };
 
 

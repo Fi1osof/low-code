@@ -501,6 +501,7 @@ export interface NexusGenFieldTypes {
   Mutation: {
     // field return type
     createResetPasswordProcessor: NexusGenRootTypes['ResetPasswordResponse'] // ResetPasswordResponse!
+    execCommand: NexusGenScalars['JSON'] | null // JSON
     resetPasswordProcessor: NexusGenRootTypes['AuthPayload'] // AuthPayload!
     signin: NexusGenRootTypes['AuthPayload'] // AuthPayload!
     signup: NexusGenRootTypes['AuthPayload'] // AuthPayload!
@@ -573,6 +574,7 @@ export interface NexusGenFieldTypeNames {
   Mutation: {
     // field return type name
     createResetPasswordProcessor: 'ResetPasswordResponse'
+    execCommand: 'JSON'
     resetPasswordProcessor: 'AuthPayload'
     signin: 'AuthPayload'
     signup: 'AuthPayload'
@@ -625,6 +627,12 @@ export interface NexusGenArgTypes {
     createResetPasswordProcessor: {
       // args
       where: NexusGenInputs['UserWhereUniqueInput'] // UserWhereUniqueInput!
+    }
+    execCommand: {
+      // args
+      args?: string[] | null // [String!]
+      cmd: string // String!
+      cwd?: string | null // String
     }
     resetPasswordProcessor: {
       // args
